@@ -25,5 +25,5 @@ let secondNumber = 0;
 // Declare calculator function
 
 function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
-    // function
+    return calcOperator(calcfirstNumber, calcsecondNumber);
 }
