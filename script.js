@@ -15,3 +15,15 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
+
+// Initialize variables for two numbers and an operator
+
+let firstNumber = 0;
+let operator = "";
+let secondNumber = 0;
+
+// Declare calculator function
+
+function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
+    // function
+}
