@@ -42,7 +42,6 @@ buttons.forEach((button) => {
         if (button.classList.contains("number")) {
             displayValue += button.id;
             display.textContent = displayValue;
-        }; 
-            
-    };
+        }
+    });
 });
