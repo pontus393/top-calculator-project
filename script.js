@@ -42,16 +42,7 @@ buttons.forEach((button) => {
         if (button.classList.contains("number")) {
             displayValue += button.id;
             display.textContent = displayValue;
-        }
-
-        // IF CLASS IS OPERATOR
-
-        // Store the value as a number
-        // Get the next number
-
-
-        // if class = equals?
-    
-    });
-
+        }; 
+            
+    };
 });
