@@ -30,7 +30,7 @@ function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
 
 // Display value logic
 
-let displayValue = 0;
+let displayValue = "0";
 
 // Write value of displayValue to the display
 
@@ -38,12 +38,11 @@ let displayValue = 0;
 
 const numberButtons = document.querySelectorAll(".button.number");
 
-
 numberButtons.forEach((numberButton) => {
 
     numberButton.addEventListener("click", () => {
     
-        displayValue = numberButton.id;
+        displayValue += numberButton.id;
     
     });
 
