@@ -41,7 +41,7 @@ function operate(calcOperator, calcfirstNumber, calcsecondNumber) { // consider 
 
 // Display value logic
 
-let displayValue = "0";
+let displayValue = 0;
 const display = document.querySelector(".display_numbers");
 const buttons = document.querySelectorAll(".button");
 
@@ -52,27 +52,22 @@ buttons.forEach((button) => {
     button.addEventListener("click", () => {
     
         if (button.classList.contains("number")) {
-            console.log("Number button clicked");
             displayValue += button.id;
             display.textContent = displayValue;
+
         } else if (button.classList.contains("operator")) {
-
-            console.log("Operator button clicked");
-
-            
             if (firstNumber == 0) {
-                console.log("First number saved");
-                firstNumber = displayValue;
-                displayValue = 0;
-            } else { 
-                console.log("Second number saved");
-                secondNumber = displayValue;
+                firstNumber = Number(displayValue);
                 operator = button.id;
+                displayValue = 0;
+            } else if (displayValue !== 0) { 
+                secondNumber = Number(displayValue);
                 result = operate(operator,firstNumber,secondNumber);
-                console.log("result saved")
-
+                firstNumber = result;
+                display.textContent = result;
+                operator = button.id;
+                displayValue = 0;
             }
         };
     });
 });
-
