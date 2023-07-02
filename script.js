@@ -24,7 +24,7 @@ let secondNumber = 0;
 
 // Declare calculator function
 
-function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
+function operate(calcOperator, calcfirstNumber, calcsecondNumber) { // consider reordering
     return calcOperator(calcfirstNumber, calcsecondNumber);
 }
 
@@ -32,14 +32,25 @@ function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
 
 let displayValue = "0";
 const display = document.querySelector(".display_numbers");
-const numberButtons = document.querySelectorAll(".button.number");
+const buttons = document.querySelectorAll(".button");
 
-numberButtons.forEach((numberButton) => {
 
-    numberButton.addEventListener("click", () => {
+buttons.forEach((button) => {
+
+    button.addEventListener("click", () => {
     
-        displayValue += numberButton.id;
-        display.textContent = displayValue;
+        if (button.classList.contains("number")) {
+            displayValue += button.id;
+            display.textContent = displayValue;
+        }
+
+        // IF CLASS IS OPERATOR
+
+        // Store the value as a number
+        // Get the next number
+
+
+        // if class = equals?
     
     });
 
