@@ -27,3 +27,24 @@ let secondNumber = 0;
 function operate(calcOperator, calcfirstNumber, calcsecondNumber) {
     return calcOperator(calcfirstNumber, calcsecondNumber);
 }
+
+// Display value logic
+
+let displayValue = 0;
+
+// Write value of displayValue to the display
+
+// Update variable displayValue based on clicks
+
+const numberButtons = document.querySelectorAll(".button.number");
+
+
+numberButtons.forEach((numberButton) => {
+
+    numberButton.addEventListener("click", () => {
+    
+        displayValue = numberButton.id;
+    
+    });
+
+});
