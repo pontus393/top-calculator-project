@@ -45,8 +45,6 @@ let displayValue = 0;
 const display = document.querySelector(".display_numbers");
 const buttons = document.querySelectorAll(".button");
 
-console.log("Starting")
-
 buttons.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -60,14 +58,19 @@ buttons.forEach((button) => {
                 firstNumber = Number(displayValue);
                 operator = button.id;
                 displayValue = 0;
-            } else if (displayValue !== 0) { 
+            } else { 
                 secondNumber = Number(displayValue);
                 result = operate(operator,firstNumber,secondNumber);
                 firstNumber = result;
                 display.textContent = result;
                 operator = button.id;
                 displayValue = 0;
-            }
+            };
+        } else if (button.classList.contains("equals")) {
+            secondNumber = Number(displayValue);
+            result = operate(operator,firstNumber,secondNumber);
+            firstNumber = result;
+            display.textContent = result;
         };
     });
 });
